@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h2>signup</h2>
+
+<div class="container">
+    <form action="{{ url_for('Signup')}}" method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" name='name' class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" name='email' class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+            <input type="password" name='password' class="form-control" >
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Confirm Password</label>
+            <input type="password" name='password2' class="form-control" >
+        </div>
+        <input type="submit" class="btn btn-primary" value='Signup'>
+    </form>
+</div>
+
+
+{% endblock %}

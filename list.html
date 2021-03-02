@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<h2 class="text text-center">User List</h2>
+
+
+
+<div class="container">
+ 
+ <table class="table">
+    <thead>
+       <tr>
+        <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Action</th>
+          
+       </tr>
+    </thead>
+    
+    <tbody>
+       {% for user in users %}
+          <tr>
+            <td>{{user.id1}}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+
+            <td><a class="btn btn-danger" href="/delete/{{user.id1}}" role="button">Delete</a></td>
+          </tr>
+       {% endfor %}
+    </tbody>
+ </table>
+
+</div>
+
+{% endblock %}
